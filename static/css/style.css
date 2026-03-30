@@ -1,0 +1,244 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    background: #f9fafb;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: linear-gradient(90deg, #2E7D32, #66BB6A);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    padding: 20px;
+
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url('/static/images/farm.jpg') center/cover;
+}
+
+.hero h1 {
+    font-size: 48px;
+    max-width: 800px;
+    font-weight: 600;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 18px;
+    animation: fadeInUp 1.3s ease forwards;
+}
+
+/* BUTTON */
+.btn {
+    background: linear-gradient(90deg, #2E7D32, #66BB6A);
+    color: white;
+    padding: 12px 26px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 5px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(46,125,50,0.4);
+}
+
+/* SECTION */
+.section {
+    padding: 70px 40px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.4s;
+
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* TRUST BAR */
+.trust-bar {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(90deg, #66BB6A, #81C784);
+    color: white;
+    padding: 18px;
+    font-weight: 500;
+}
+
+/* PAGE HEADER */
+.page-header {
+    padding: 70px 40px;
+    background: linear-gradient(90deg, #2E7D32, #66BB6A);
+    color: white;
+    text-align: center;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2E7D32;
+    outline: none;
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(90deg, #2E7D32, #66BB6A);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: #eee;
+    font-size: 14px;
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 16px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .section {
+        padding: 40px 20px;
+    }
+}
